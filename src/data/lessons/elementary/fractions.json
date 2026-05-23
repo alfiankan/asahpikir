@@ -24,11 +24,102 @@
         "choices": ["1/4", "2/4", "3/4", "4/4"],
         "correctAnswer": "3/4",
         "hint": "Set the numerator (top) to 3 and the denominator (bottom) to 4.",
-        "explanation": "Shading 3 slices of a 4-slice circle represents the fraction $3/4$."
+        "explanation": "Shading 3 slices of a 4-slice circle represents the fraction $3/4$.",
+        "explanationSteps": [
+          "Look at the circle divided into 4 total equal slices.",
+          "Count the shaded slices: there are 3.",
+          "Write the numerator (top number) as 3.",
+          "Write the denominator (bottom number) as 4.",
+          "The fraction is 3/4."
+        ]
       }
     },
     {
       "id": "frac_q2",
+      "level": 1,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 1, "denominator": 2 },
+      "content": "### Identify half",
+      "question": {
+        "text": "What fraction represents 1 part out of 2?",
+        "type": "multiple-choice",
+        "choices": ["1/3", "1/2", "2/2", "2/1"],
+        "correctAnswer": "1/2",
+        "hint": "Numerator is 1, denominator is 2.",
+        "explanation": "1 part out of 2 is 1/2.",
+        "explanationSteps": [
+          "Count total parts: 2.",
+          "Count shaded parts: 1.",
+          "Fraction is 1/2."
+        ]
+      }
+    },
+    {
+      "id": "frac_q3",
+      "level": 1,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 2, "denominator": 5 },
+      "content": "### Shading columns",
+      "question": {
+        "text": "If a rectangle has 5 equal columns and 2 are shaded, what is the fraction?",
+        "type": "multiple-choice",
+        "choices": ["1/5", "2/5", "3/5", "5/2"],
+        "correctAnswer": "2/5",
+        "hint": "The denominator is 5, the numerator is 2.",
+        "explanation": "2 columns out of 5 equals 2/5.",
+        "explanationSteps": [
+          "Total columns is 5 (denominator).",
+          "Shaded columns is 2 (numerator).",
+          "The fraction is 2/5."
+        ]
+      }
+    },
+    {
+      "id": "frac_q4",
+      "level": 1,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 5, "denominator": 6 },
+      "content": "### Slice count",
+      "question": {
+        "text": "Shading 5 slices out of 6 gives what fraction?",
+        "type": "multiple-choice",
+        "choices": ["1/6", "5/6", "6/5", "5/5"],
+        "correctAnswer": "5/6",
+        "hint": "Count of shaded slices is the top number.",
+        "explanation": "Shading 5 out of 6 parts is 5/6.",
+        "explanationSteps": [
+          "Total slices = 6.",
+          "Shaded slices = 5.",
+          "The fraction is 5/6."
+        ]
+      }
+    },
+    {
+      "id": "frac_q5",
+      "level": 1,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 3, "denominator": 3 },
+      "content": "### Whole circle",
+      "question": {
+        "text": "What fraction represents a whole circle shaded when cut into 3 slices?",
+        "type": "multiple-choice",
+        "choices": ["1/3", "2/3", "3/3", "3/1"],
+        "correctAnswer": "3/3",
+        "hint": "Shading all 3 parts of 3 gives 3/3.",
+        "explanation": "3 slices out of 3 is 3/3, which represents the entire whole.",
+        "explanationSteps": [
+          "Denominator is total parts = 3.",
+          "Numerator is shaded parts = 3.",
+          "The fraction is 3/3."
+        ]
+      }
+    },
+    {
+      "id": "frac_q6",
       "level": 2,
       "type": "question",
       "widget": "FractionVisualizer",
@@ -40,11 +131,105 @@
         "choices": ["2/6", "2/5", "3/6", "3/8"],
         "correctAnswer": "2/6",
         "hint": "Multiply both the top and bottom of 1/3 by the same number to find an equivalent fraction.",
-        "explanation": "If we multiply both numerator and denominator of $1/3$ by 2, we get $2/6$. Looking at the circle, 1 part out of 3 is identical in area to 2 parts out of 6."
+        "explanation": "If we multiply both numerator and denominator of $1/3$ by 2, we get $2/6$. Looking at the circle, 1 part out of 3 is identical in area to 2 parts out of 6.",
+        "explanationSteps": [
+          "To find an equivalent fraction, multiply the numerator and denominator by the same integer.",
+          "Let's multiply 1/3 top and bottom by 2.",
+          "Numerator: 1 * 2 = 2.",
+          "Denominator: 3 * 2 = 6.",
+          "So, 1/3 is equivalent to 2/6."
+        ]
       }
     },
     {
-      "id": "frac_q3",
+      "id": "frac_q7",
+      "level": 2,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 2, "denominator": 4, "targetNumerator": 4, "targetDenominator": 8, "showComparison": true },
+      "content": "### Match the Denominator",
+      "question": {
+        "text": "Find a fraction equivalent to 2/4 with a denominator of 8.",
+        "type": "multiple-choice",
+        "choices": ["3/8", "4/8", "5/8", "6/8"],
+        "correctAnswer": "4/8",
+        "hint": "To go from 4 to 8, we multiply by 2. Do the same to the top.",
+        "explanation": "Multiplying both parts of 2/4 by 2 yields 4/8.",
+        "explanationSteps": [
+          "Identify the target denominator: 8.",
+          "The current denominator is 4. To get 8, we multiply by 2.",
+          "Multiply the current numerator (2) by 2 as well: 2 * 2 = 4.",
+          "The equivalent fraction is 4/8."
+        ]
+      }
+    },
+    {
+      "id": "frac_q8",
+      "level": 2,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 3, "denominator": 5 },
+      "content": "### Equivalence scale",
+      "question": {
+        "text": "Which fraction is equivalent to 3/5?",
+        "type": "multiple-choice",
+        "choices": ["6/10", "5/10", "4/10", "3/10"],
+        "correctAnswer": "6/10",
+        "hint": "Multiply both parts by 2.",
+        "explanation": "3/5 * 2/2 = 6/10.",
+        "explanationSteps": [
+          "Multiply the numerator 3 by 2 to get 6.",
+          "Multiply the denominator 5 by 2 to get 10.",
+          "The equivalent fraction is 6/10."
+        ]
+      }
+    },
+    {
+      "id": "frac_q9",
+      "level": 2,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 4, "denominator": 12 },
+      "content": "### Simplifying Fractions",
+      "question": {
+        "text": "Simplify the fraction 4/12 to its lowest terms.",
+        "type": "multiple-choice",
+        "choices": ["1/2", "1/3", "1/4", "2/6"],
+        "correctAnswer": "1/3",
+        "hint": "Divide the numerator and denominator by their greatest common factor, which is 4.",
+        "explanation": "4/12 simplifies to 1/3 when divided by 4.",
+        "explanationSteps": [
+          "Find the greatest common factor of 4 and 12, which is 4.",
+          "Divide numerator: 4 / 4 = 1.",
+          "Divide denominator: 12 / 4 = 3.",
+          "The simplified fraction is 1/3."
+        ]
+      }
+    },
+    {
+      "id": "frac_q10",
+      "level": 2,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 2, "denominator": 3 },
+      "content": "### Scale up",
+      "question": {
+        "text": "Which fraction is equivalent to 2/3?",
+        "type": "multiple-choice",
+        "choices": ["4/9", "5/9", "6/9", "8/9"],
+        "correctAnswer": "6/9",
+        "hint": "Multiply both parts by 3.",
+        "explanation": "2/3 multiplied by 3/3 is 6/9.",
+        "explanationSteps": [
+          "To test equivalent fractions, we can multiply 2/3 by 3.",
+          "Numerator: 2 * 3 = 6.",
+          "Denominator: 3 * 3 = 9.",
+          "Result is 6/9."
+        ]
+      }
+    },
+    {
+      "id": "frac_q11",
       "level": 3,
       "type": "question",
       "widget": "FractionVisualizer",
@@ -56,7 +241,102 @@
         "choices": ["3/5 is larger", "2/3 is larger", "They are equal"],
         "correctAnswer": "2/3 is larger",
         "hint": "Convert to a common denominator of 15: 3/5 is 9/15, and 2/3 is 10/15.",
-        "explanation": "Since $10/15 > 9/15$, $2/3$ is larger than $3/5$. Visually, the circle representing $2/3$ has more shaded area than the one representing $3/5$."
+        "explanation": "Since $10/15 > 9/15$, $2/3$ is larger than $3/5$. Visually, the circle representing $2/3$ has more shaded area than the one representing $3/5$.",
+        "explanationSteps": [
+          "To compare 3/5 and 2/3, find a common denominator.",
+          "The least common multiple of 5 and 3 is 15.",
+          "Convert 3/5: multiply top and bottom by 3 to get 9/15.",
+          "Convert 2/3: multiply top and bottom by 5 to get 10/15.",
+          "Compare: 10/15 is larger than 9/15. Therefore, 2/3 is larger."
+        ]
+      }
+    },
+    {
+      "id": "frac_q12",
+      "level": 3,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 1, "denominator": 2, "targetNumerator": 2, "targetDenominator": 5, "showComparison": true },
+      "content": "### Comparing 1/2 and 2/5",
+      "question": {
+        "text": "Which fraction is larger: 1/2 or 2/5?",
+        "type": "multiple-choice",
+        "choices": ["1/2 is larger", "2/5 is larger", "They are equal"],
+        "correctAnswer": "1/2 is larger",
+        "hint": "Find a common denominator of 10.",
+        "explanation": "1/2 is 5/10 and 2/5 is 4/10. 5/10 is larger.",
+        "explanationSteps": [
+          "Common denominator of 2 and 5 is 10.",
+          "Convert 1/2 to tenths: 1/2 = 5/10.",
+          "Convert 2/5 to tenths: 2/5 = 4/10.",
+          "Compare: 5/10 > 4/10, so 1/2 is larger."
+        ]
+      }
+    },
+    {
+      "id": "frac_q13",
+      "level": 3,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 3, "denominator": 4, "targetNumerator": 4, "targetDenominator": 5, "showComparison": true },
+      "content": "### Which is smaller?",
+      "question": {
+        "text": "Which fraction is smaller: 3/4 or 4/5?",
+        "type": "multiple-choice",
+        "choices": ["3/4 is smaller", "4/5 is smaller", "They are equal"],
+        "correctAnswer": "3/4 is smaller",
+        "hint": "Common denominator is 20.",
+        "explanation": "3/4 = 15/20 and 4/5 = 16/20. 15/20 is smaller.",
+        "explanationSteps": [
+          "Find common denominator for 4 and 5, which is 20.",
+          "Convert 3/4: 3 * 5 / 20 = 15/20.",
+          "Convert 4/5: 4 * 4 / 20 = 16/20.",
+          "Since 15/20 < 16/20, 3/4 is smaller."
+        ]
+      }
+    },
+    {
+      "id": "frac_q14",
+      "level": 3,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 1, "denominator": 3 },
+      "content": "### Ordering fractions",
+      "question": {
+        "text": "Order these from smallest to largest: 1/3, 1/4, 1/2.",
+        "type": "multiple-choice",
+        "choices": ["1/2, 1/3, 1/4", "1/4, 1/3, 1/2", "1/3, 1/4, 1/2", "1/4, 1/2, 1/3"],
+        "correctAnswer": "1/4, 1/3, 1/2",
+        "hint": "When numerators are equal, larger denominators represent smaller slices.",
+        "explanation": "1/4 is 0.25, 1/3 is 0.33, 1/2 is 0.50.",
+        "explanationSteps": [
+          "With the same numerator (1), compare denominators: 4, 3, 2.",
+          "A larger denominator splits the whole into more pieces, making each piece smaller.",
+          "So, 1/4 is the smallest, followed by 1/3, and 1/2 is the largest.",
+          "The order is: 1/4, 1/3, 1/2."
+        ]
+      }
+    },
+    {
+      "id": "frac_q15",
+      "level": 3,
+      "type": "question",
+      "widget": "FractionVisualizer",
+      "widgetParams": { "numerator": 5, "denominator": 8, "targetNumerator": 3, "targetDenominator": 4, "showComparison": true },
+      "content": "### Comparing 5/8 and 3/4",
+      "question": {
+        "text": "Is 5/8 larger or smaller than 3/4?",
+        "type": "multiple-choice",
+        "choices": ["5/8 is larger", "5/8 is smaller", "They are equal"],
+        "correctAnswer": "5/8 is smaller",
+        "hint": "Convert 3/4 to eighths.",
+        "explanation": "3/4 is equivalent to 6/8. 5/8 is smaller than 6/8.",
+        "explanationSteps": [
+          "Convert 3/4 to a fraction with denominator 8: multiply top and bottom by 2.",
+          "3/4 = 6/8.",
+          "Compare 5/8 with 6/8.",
+          "Since 5/8 < 6/8, 5/8 is smaller."
+        ]
       }
     }
   ]

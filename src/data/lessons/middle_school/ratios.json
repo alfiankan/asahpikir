@@ -16,7 +16,7 @@
       "level": 1,
       "type": "question",
       "widget": "RatioMixer",
-      "widgetParams": { "blue": 4, "yellow": 6, "targetColor": [4, 6] },
+      "widgetParams": { "blue": 4, "yellow": 6 },
       "content": "### Scaling the Mixture\nIf we double the recipe to make a larger batch of green paint, we must multiply both parts by 2. This keeps the ratio proportional and the color identical.",
       "question": {
         "text": "What is the simplified form of the ratio 4:6?",
@@ -24,15 +24,110 @@
         "choices": ["1:2", "2:3", "3:2", "4:3"],
         "correctAnswer": "2:3",
         "hint": "Divide both numbers by their greatest common factor, which is 2.",
-        "explanation": "Dividing both 4 and 6 by 2 yields $2:3$, showing that $4:6$ is equivalent to $2:3$ and results in the exact same paint color."
+        "explanation": "Dividing both 4 and 6 by 2 yields $2:3$, showing that $4:6$ is equivalent to $2:3$ and results in the exact same paint color.",
+        "explanationSteps": [
+          "Write the ratio as a fraction: 4/6.",
+          "Find the Greatest Common Divisor (GCD) of 4 and 6, which is 2.",
+          "Divide the numerator: 4 / 2 = 2.",
+          "Divide the denominator: 6 / 2 = 3.",
+          "The simplified ratio is 2:3."
+        ]
       }
     },
     {
       "id": "ratio_q2",
+      "level": 1,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 8, "yellow": 12 },
+      "content": "### Simplifying 8:12",
+      "question": {
+        "text": "Simplify the ratio 8:12.",
+        "type": "multiple-choice",
+        "choices": ["2:3", "3:4", "1:2", "4:3"],
+        "correctAnswer": "2:3",
+        "hint": "Divide both numbers by 4.",
+        "explanation": "Dividing by GCF 4 gives 2:3.",
+        "explanationSteps": [
+          "Identify GCF of 8 and 12, which is 4.",
+          "Divide 8 by 4 to get 2.",
+          "Divide 12 by 4 to get 3.",
+          "The ratio is 2:3."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q3",
+      "level": 1,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 5, "yellow": 15 },
+      "content": "### Marbles ratio",
+      "question": {
+        "text": "If a jar has 5 red marbles and 15 blue marbles, what is the ratio of red to blue marbles?",
+        "type": "multiple-choice",
+        "choices": ["1:2", "1:3", "3:1", "1:4"],
+        "correctAnswer": "1:3",
+        "hint": "Divide 5 and 15 by 5.",
+        "explanation": "5:15 simplifies to 1:3.",
+        "explanationSteps": [
+          "Write down the raw ratio: 5 red to 15 blue.",
+          "Find GCF of 5 and 15, which is 5.",
+          "Divide both parts by 5: 5/5 = 1 and 15/5 = 3.",
+          "The ratio is 1:3."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q4",
+      "level": 1,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 10, "yellow": 25 },
+      "content": "### Simplify 10:25",
+      "question": {
+        "text": "Simplify the ratio 10:25.",
+        "type": "multiple-choice",
+        "choices": ["2:5", "1:2", "3:5", "5:2"],
+        "correctAnswer": "2:5",
+        "hint": "Divide both numbers by 5.",
+        "explanation": "10:25 simplifies to 2:5.",
+        "explanationSteps": [
+          "GCF of 10 and 25 is 5.",
+          "Divide 10 by 5 = 2.",
+          "Divide 25 by 5 = 5.",
+          "The simplified ratio is 2:5."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q5",
+      "level": 1,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 6, "yellow": 8 },
+      "content": "### Fruit Basket",
+      "question": {
+        "text": "A basket contains 6 apples and 8 oranges. What is the ratio of apples to total fruit?",
+        "type": "multiple-choice",
+        "choices": ["3:4", "3:7", "4:3", "7:3"],
+        "correctAnswer": "3:7",
+        "hint": "First find the total fruit count, then simplify.",
+        "explanation": "Total is 14. Apples to total is 6:14, which simplifies to 3:7.",
+        "explanationSteps": [
+          "Find total fruit: 6 apples + 8 oranges = 14 total.",
+          "Set up ratio of apples to total: 6:14.",
+          "Divide by GCF of 2.",
+          "Simplified ratio is 3:7."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q6",
       "level": 2,
       "type": "question",
       "widget": "RatioMixer",
-      "widgetParams": { "blue": 6, "yellow": 10, "targetRatio": [3, 5] },
+      "widgetParams": { "blue": 3, "yellow": 5 },
       "content": "### Direct Proportion calculations\nWhen two ratios are equal, they form a proportion. For instance, $3/5 = x/15$. We can scale up or cross-multiply to solve for $x$.",
       "question": {
         "text": "Solve for x: 3/5 = x/15",
@@ -40,15 +135,109 @@
         "choices": ["6", "8", "9", "12"],
         "correctAnswer": "9",
         "hint": "Since the denominator 5 is multiplied by 3 to get 15, do the same to the numerator 3.",
-        "explanation": "Multiplying the numerator 3 by 3 gives $x = 9$. Thus, $3:5$ is proportional to $9:15$."
+        "explanation": "Multiplying the numerator 3 by 3 gives $x = 9$. Thus, $3:5$ is proportional to $9:15$.",
+        "explanationSteps": [
+          "Write the proportion: 3/5 = x/15.",
+          "Compare the denominators: to go from 5 to 15, we multiply by 3.",
+          "To keep the fractions equal, multiply the numerator 3 by 3 as well.",
+          "x = 3 * 3 = 9."
+        ]
       }
     },
     {
-      "id": "ratio_q3",
+      "id": "ratio_q7",
+      "level": 2,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 2, "yellow": 3 },
+      "content": "### Solve for x: 2/3 = 8/x",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["9", "12", "15", "16"],
+        "correctAnswer": "12",
+        "hint": "Since numerator 2 is multiplied by 4 to get 8, do the same to the bottom.",
+        "explanation": "Multiplying 3 by 4 gives x = 12.",
+        "explanationSteps": [
+          "Equation is 2/3 = 8/x.",
+          "Compare numerators: 2 * 4 = 8.",
+          "Scale denominator by same factor: 3 * 4 = 12.",
+          "The value of x is 12."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q8",
+      "level": 2,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 5, "yellow": 8 },
+      "content": "### Solve for x: 5/8 = x/24",
+      "question": {
+        "text": "Find x:",
+        "type": "multiple-choice",
+        "choices": ["10", "12", "15", "20"],
+        "correctAnswer": "15",
+        "hint": "Multiply 8 by 3 to get 24.",
+        "explanation": "5 * 3 = 15, so x = 15.",
+        "explanationSteps": [
+          "Proportion: 5/8 = x/24.",
+          "Denominator scale factor is 24 / 8 = 3.",
+          "Scale numerator: 5 * 3 = 15.",
+          "So, x = 15."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q9",
+      "level": 2,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 2, "yellow": 5 },
+      "content": "### Recipe scale",
+      "question": {
+        "text": "A recipe calls for 2 cups of sugar for every 5 cups of flour. If you use 15 cups of flour, how much sugar is needed?",
+        "type": "multiple-choice",
+        "choices": ["4 cups", "6 cups", "8 cups", "10 cups"],
+        "correctAnswer": "6 cups",
+        "hint": "Scale the sugar ratio (2/5) by 3.",
+        "explanation": "If flour is tripled (15 cups), sugar must also be tripled: 2 * 3 = 6 cups.",
+        "explanationSteps": [
+          "Sugar to flour ratio is 2:5.",
+          "Flour is scaled from 5 to 15 (multiplied by 3).",
+          "Multiply sugar by 3: 2 * 3 = 6.",
+          "You need 6 cups of sugar."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q10",
+      "level": 2,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 4, "yellow": 7 },
+      "content": "### Solve for x: 4/7 = 16/x",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["21", "24", "28", "32"],
+        "correctAnswer": "28",
+        "hint": "Multiply 7 by 4.",
+        "explanation": "4 * 4 = 16, so 7 * 4 = 28.",
+        "explanationSteps": [
+          "Start with 4/7 = 16/x.",
+          "Scale factor of numerator is 16 / 4 = 4.",
+          "Apply this to denominator: 7 * 4 = 28.",
+          "Result is x = 28."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q11",
       "level": 3,
       "type": "question",
       "widget": "RatioMixer",
-      "widgetParams": { "blue": 1, "yellow": 4, "inverse": true },
+      "widgetParams": { "blue": 1, "yellow": 4 },
       "content": "### Inverse Proportion\nIn a direct proportion, as one value increases, the other increases. In an **inverse proportion**, as one value increases, the other *decreases*. For example, if 2 painters take 6 hours to paint a house, 4 painters will take *less* time.",
       "question": {
         "text": "If 2 painters take 6 hours to complete a job, how long will it take 4 painters working at the same speed?",
@@ -56,7 +245,97 @@
         "choices": ["12 hours", "6 hours", "3 hours", "1.5 hours"],
         "correctAnswer": "3 hours",
         "hint": "More workers mean less time. The product of workers and hours is constant: 2 * 6 = 12 worker-hours.",
-        "explanation": "The total work needed is $2 \times 6 = 12$ worker-hours. If 4 painters work together, they divide the total workload: $12 / 4 = 3$ hours."
+        "explanation": "The total work needed is $2 \\times 6 = 12$ worker-hours. If 4 painters work together, they divide the total workload: $12 / 4 = 3$ hours.",
+        "explanationSteps": [
+          "Identify that this is an inverse relationship (more painters = less time).",
+          "Calculate total workload in worker-hours: 2 painters * 6 hours = 12 worker-hours.",
+          "Divide total workload by new number of painters: 12 worker-hours / 4 painters.",
+          "Result is 3 hours."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q12",
+      "level": 3,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 3, "yellow": 8 },
+      "content": "### Emptying a pool",
+      "question": {
+        "text": "If 3 pumps take 8 hours to empty a pool, how long will it take 6 identical pumps?",
+        "type": "multiple-choice",
+        "choices": ["16 hours", "8 hours", "4 hours", "2 hours"],
+        "correctAnswer": "4 hours",
+        "hint": "Total pump hours = 3 * 8 = 24. Divide by 6 pumps.",
+        "explanation": "Total workload is 24 pump-hours. 24 / 6 pumps = 4 hours.",
+        "explanationSteps": [
+          "Find total pump workload: 3 pumps * 8 hours = 24 pump-hours.",
+          "With 6 pumps running, divide the total workload: 24 pump-hours / 6 pumps.",
+          "Result is 4 hours."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q13",
+      "level": 3,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 6, "yellow": 9 },
+      "content": "### Speed vs Time",
+      "question": {
+        "text": "A car travels at 60 km/h and takes 3 hours to arrive. How long does it take at 90 km/h?",
+        "type": "multiple-choice",
+        "choices": ["4.5 hours", "3 hours", "2 hours", "1.5 hours"],
+        "correctAnswer": "2 hours",
+        "hint": "Calculate distance first (speed * time). Then divide by 90.",
+        "explanation": "Distance = 60 * 3 = 180 km. Time at 90 km/h is 180 / 90 = 2 hours.",
+        "explanationSteps": [
+          "Find total distance: 60 km/h * 3 hours = 180 km.",
+          "Use speed-distance formula: Time = Distance / Speed.",
+          "Compute new time: 180 km / 90 km/h = 2 hours."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q14",
+      "level": 3,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 5, "yellow": 12 },
+      "content": "### Wall construction",
+      "question": {
+        "text": "If 5 workers take 12 days to build a wall, how many days will 10 workers take?",
+        "type": "multiple-choice",
+        "choices": ["24 days", "12 days", "6 days", "5 days"],
+        "correctAnswer": "6 days",
+        "hint": "Total work = 5 * 12 = 60 worker-days.",
+        "explanation": "60 worker-days divided by 10 workers = 6 days.",
+        "explanationSteps": [
+          "Calculate total worker-days required: 5 workers * 12 days = 60 worker-days.",
+          "Divide by the new number of workers: 60 worker-days / 10 workers.",
+          "The result is 6 days."
+        ]
+      }
+    },
+    {
+      "id": "ratio_q15",
+      "level": 3,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 4, "yellow": 5 },
+      "content": "### Machine efficiency",
+      "question": {
+        "text": "If 4 identical machines pack 100 boxes in 5 hours, how long would it take 2 machines to pack the same number of boxes?",
+        "type": "multiple-choice",
+        "choices": ["10 hours", "5 hours", "2.5 hours", "20 hours"],
+        "correctAnswer": "10 hours",
+        "hint": "Fewer machines take more time. Product is constant.",
+        "explanation": "Total machine time is 4 * 5 = 20 machine-hours. 20 / 2 machines = 10 hours.",
+        "explanationSteps": [
+          "Workload constant. 4 machines take 5 hours = 20 machine-hours.",
+          "With 2 machines, divide the 20 hours: 20 / 2.",
+          "The result is 10 hours."
+        ]
       }
     }
   ]

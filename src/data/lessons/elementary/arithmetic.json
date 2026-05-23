@@ -17,46 +17,327 @@
       "type": "question",
       "widget": "BalanceScale",
       "widgetParams": { "left": ["x", 3], "right": [8] },
-      "content": "### Find the Unknown\nLook at the scale. We have a mystery box $x$ and a weight of 3 on the left, and a weight of 8 on the right. What weight must the mystery box $x$ have to balance the scale?",
+      "content": "### Find the Unknown\nLook at the scale. We have a mystery box $x$ and a weight of 3 on the left, and a weight of 8 on the right.",
       "question": {
         "text": "What is the value of x?",
         "type": "multiple-choice",
         "choices": ["3", "4", "5", "6"],
         "correctAnswer": "5",
         "hint": "Try subtracting 3 from both sides of the scale to isolate the mystery box.",
-        "explanation": "If we remove 3 units from both sides, the scale remains balanced, showing that the mystery box $x$ weighs exactly 5 units."
+        "explanation": "If we remove 3 units from both sides, the scale remains balanced, showing that the mystery box $x$ weighs exactly 5 units.",
+        "explanationSteps": [
+          "Identify the balance equation: x + 3 = 8.",
+          "Subtract 3 units from the left side of the scale.",
+          "To keep the scale balanced, subtract 3 units from the right side as well.",
+          "This leaves the mystery box x by itself, balancing with a 5-unit weight (x = 5)."
+        ]
       }
     },
     {
       "id": "arith_q2",
+      "level": 1,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 2], "right": [7] },
+      "content": "### Solve for x: x + 2 = 7\nUse the scale to visual. The left side has a box and a weight of 2. The right side has 7.",
+      "question": {
+        "text": "What is the value of x?",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "6"],
+        "correctAnswer": "5",
+        "hint": "Remove 2 units from both sides to balance the scale.",
+        "explanation": "Removing 2 units from both sides leaves x = 5.",
+        "explanationSteps": [
+          "Start with the equation x + 2 = 7.",
+          "Subtract 2 from the left side to isolate x.",
+          "Subtract 2 from the right side to keep the balance (7 - 2).",
+          "The result is x = 5."
+        ]
+      }
+    },
+    {
+      "id": "arith_q3",
+      "level": 1,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 5], "right": [9] },
+      "content": "### Solve for x: x + 5 = 9",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "5"],
+        "correctAnswer": "4",
+        "hint": "Subtract 5 from both sides.",
+        "explanation": "Subtracting 5 from both sides yields x = 4.",
+        "explanationSteps": [
+          "Equation is x + 5 = 9.",
+          "We want to isolate x by doing the inverse of adding 5.",
+          "Subtract 5 from both sides: 9 - 5.",
+          "The result is x = 4."
+        ]
+      }
+    },
+    {
+      "id": "arith_q4",
+      "level": 1,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 1], "right": [10] },
+      "content": "### Solve for x: x + 1 = 10",
+      "question": {
+        "text": "Find x:",
+        "type": "multiple-choice",
+        "choices": ["7", "8", "9", "10"],
+        "correctAnswer": "9",
+        "hint": "Subtract 1 from both sides.",
+        "explanation": "Subtracting 1 from both sides gives x = 9.",
+        "explanationSteps": [
+          "Equation: x + 1 = 10.",
+          "Subtract 1 from the left side.",
+          "Subtract 1 from the right side: 10 - 1.",
+          "We get x = 9."
+        ]
+      }
+    },
+    {
+      "id": "arith_q5",
+      "level": 1,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 6], "right": [8] },
+      "content": "### Solve for x: x + 6 = 8",
+      "question": {
+        "text": "What is x?",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "14"],
+        "correctAnswer": "2",
+        "hint": "Subtract 6 from both sides.",
+        "explanation": "Subtracting 6 from both sides gives x = 2.",
+        "explanationSteps": [
+          "Equation is x + 6 = 8.",
+          "Subtract 6 from both sides: 8 - 6.",
+          "This leaves x = 2."
+        ]
+      }
+    },
+    {
+      "id": "arith_q6",
       "level": 2,
       "type": "question",
       "widget": "BalanceScale",
       "widgetParams": { "left": ["x", "x", 2], "right": [12] },
-      "content": "### Two Identical Boxes\nNow we have two identical mystery boxes $x$ and a weight of 2 balancing with 12 on the right side. Let's find what one box $x$ weighs.",
+      "content": "### Two Identical Boxes\nNow we have two identical mystery boxes $x$ and a weight of 2 balancing with 12 on the right side.",
       "question": {
         "text": "Solve for x: 2x + 2 = 12",
         "type": "multiple-choice",
         "choices": ["3", "4", "5", "6"],
         "correctAnswer": "5",
         "hint": "First subtract 2 from both sides. You get 2x = 10. Then divide by 2.",
-        "explanation": "Subtracting 2 from both sides gives $2x = 10$. Since the two boxes are identical, each box must weigh half of 10, which is 5."
+        "explanation": "Subtracting 2 from both sides gives $2x = 10$. Since the two boxes are identical, each box must weigh half of 10, which is 5.",
+        "explanationSteps": [
+          "Start with the equation: 2x + 2 = 12.",
+          "Remove the 2-unit block from both sides: 2x = 12 - 2, leaving 2x = 10.",
+          "Since there are 2 identical boxes, divide the remaining 10 units equally by 2.",
+          "Each box x weighs 5 units (x = 5)."
+        ]
       }
     },
     {
-      "id": "arith_q3",
+      "id": "arith_q7",
+      "level": 2,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", "x", 4], "right": [14] },
+      "content": "### Solve for x: 2x + 4 = 14",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "6"],
+        "correctAnswer": "5",
+        "hint": "First subtract 4, then divide by 2.",
+        "explanation": "Subtracting 4 gives 2x = 10, dividing by 2 gives x = 5.",
+        "explanationSteps": [
+          "Equation is 2x + 4 = 14.",
+          "Subtract 4 from both sides to isolate the 2x term: 2x = 10.",
+          "Divide both sides by 2 to isolate x: x = 10 / 2.",
+          "Result is x = 5."
+        ]
+      }
+    },
+    {
+      "id": "arith_q8",
+      "level": 2,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", "x", "x", 1], "right": [10] },
+      "content": "### Solve for x: 3x + 1 = 10",
+      "question": {
+        "text": "What is x?",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "5"],
+        "correctAnswer": "3",
+        "hint": "Subtract 1, then divide by 3.",
+        "explanation": "Subtracting 1 gives 3x = 9, dividing by 3 gives x = 3.",
+        "explanationSteps": [
+          "Start with 3x + 1 = 10.",
+          "Subtract 1 from both sides to get 3x = 9.",
+          "Divide both sides by 3: x = 9 / 3.",
+          "So, x = 3."
+        ]
+      }
+    },
+    {
+      "id": "arith_q9",
+      "level": 2,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", "x", 6], "right": [16] },
+      "content": "### Solve for x: 2x + 6 = 16",
+      "question": {
+        "text": "Find x:",
+        "type": "multiple-choice",
+        "choices": ["3", "5", "6", "8"],
+        "correctAnswer": "5",
+        "hint": "Subtract 6, then divide by 2.",
+        "explanation": "Subtracting 6 leaves 2x = 10, so x = 5.",
+        "explanationSteps": [
+          "Equation is 2x + 6 = 16.",
+          "Subtract 6 from both sides: 2x = 10.",
+          "Divide by 2: x = 5."
+        ]
+      }
+    },
+    {
+      "id": "arith_q10",
+      "level": 2,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", "x", "x", 3], "right": [15] },
+      "content": "### Solve for x: 3x + 3 = 15",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "5"],
+        "correctAnswer": "4",
+        "hint": "Subtract 3, then divide by 3.",
+        "explanation": "Subtracting 3 gives 3x = 12, dividing by 3 gives x = 4.",
+        "explanationSteps": [
+          "Start with 3x + 3 = 15.",
+          "Subtract 3 from both sides: 3x = 12.",
+          "Divide both sides by 3: x = 12 / 3.",
+          "The result is x = 4."
+        ]
+      }
+    },
+    {
+      "id": "arith_q11",
       "level": 3,
       "type": "question",
       "widget": "BalanceScale",
       "widgetParams": { "left": ["x", 7], "right": ["2x", 3] },
-      "content": "### Variables on Both Sides\nWhat happens when we have mystery boxes on both sides? We have one box $x$ and a 7 weight on the left, and two boxes $x$ and a 3 weight on the right. Let's simplify this by removing equal items from both sides.",
+      "content": "### Variables on Both Sides\nWhat happens when we have mystery boxes on both sides? We have one box $x$ and a 7 weight on the left, and two boxes $x$ and a 3 weight on the right.",
       "question": {
         "text": "Solve for x: x + 7 = 2x + 3",
         "type": "multiple-choice",
         "choices": ["3", "4", "5", "10"],
         "correctAnswer": "4",
         "hint": "Try removing one box 'x' from both sides first, then subtract 3 from both sides.",
-        "explanation": "Removing one $x$ box from both sides leaves $7 = x + 3$. Subtracting 3 from both sides gives $4 = x$, which is our solution!"
+        "explanation": "Removing one $x$ box from both sides leaves $7 = x + 3$. Subtracting 3 from both sides gives $4 = x$, which is our solution!",
+        "explanationSteps": [
+          "Write the equation: x + 7 = 2x + 3.",
+          "Simplify by removing one box x from both sides: 7 = x + 3.",
+          "Now, isolate x by subtracting 3 from both sides: 7 - 3 = x.",
+          "The result is 4 = x (so x = 4)."
+        ]
+      }
+    },
+    {
+      "id": "arith_q12",
+      "level": 3,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["2x", 5], "right": ["3x", 2] },
+      "content": "### Solve for x: 2x + 5 = 3x + 2",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "5"],
+        "correctAnswer": "3",
+        "hint": "Subtract 2x from both sides first.",
+        "explanation": "Subtracting 2x gives 5 = x + 2, so x = 3.",
+        "explanationSteps": [
+          "Start with 2x + 5 = 3x + 2.",
+          "Subtract 2x from both sides to group variables on the right: 5 = x + 2.",
+          "Subtract 2 from both sides to isolate x: 5 - 2 = x.",
+          "The result is x = 3."
+        ]
+      }
+    },
+    {
+      "id": "arith_q13",
+      "level": 3,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 10], "right": ["2x", 6] },
+      "content": "### Solve for x: x + 10 = 2x + 6",
+      "question": {
+        "text": "What is x?",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "6"],
+        "correctAnswer": "4",
+        "hint": "Subtract x, then subtract 6.",
+        "explanation": "Subtracting x gives 10 = x + 6, subtracting 6 gives x = 4.",
+        "explanationSteps": [
+          "Equation is x + 10 = 2x + 6.",
+          "Remove x from both sides: 10 = x + 6.",
+          "Subtract 6 from both sides to isolate x: 10 - 6 = x.",
+          "The result is x = 4."
+        ]
+      }
+    },
+    {
+      "id": "arith_q14",
+      "level": 3,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["2x", 8], "right": ["3x", 4] },
+      "content": "### Solve for x: 2x + 8 = 3x + 4",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "5"],
+        "correctAnswer": "4",
+        "hint": "Subtract 2x, then subtract 4.",
+        "explanation": "Subtracting 2x gives 8 = x + 4, so x = 4.",
+        "explanationSteps": [
+          "Start with 2x + 8 = 3x + 4.",
+          "Subtract 2x from both sides: 8 = x + 4.",
+          "Subtract 4 from both sides to isolate x: 8 - 4 = x.",
+          "We get x = 4."
+        ]
+      }
+    },
+    {
+      "id": "arith_q15",
+      "level": 3,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 12], "right": ["3x", 6] },
+      "content": "### Solve for x: x + 12 = 3x + 6",
+      "question": {
+        "text": "Solve for x:",
+        "type": "multiple-choice",
+        "choices": ["2", "3", "4", "6"],
+        "correctAnswer": "3",
+        "hint": "Subtract x first, then subtract 6, then divide by 2.",
+        "explanation": "Subtracting x leaves 12 = 2x + 6. Subtracting 6 gives 6 = 2x. Dividing by 2 gives x = 3.",
+        "explanationSteps": [
+          "Equation is x + 12 = 3x + 6.",
+          "Subtract x from both sides to get: 12 = 2x + 6.",
+          "Subtract 6 from both sides to isolate variables: 6 = 2x.",
+          "Divide both sides by 2 to isolate x: x = 6 / 2.",
+          "The result is x = 3."
+        ]
       }
     }
   ]

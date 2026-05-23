@@ -24,11 +24,104 @@
         "choices": ["It increases", "It decreases towards zero", "It stays the same", "It fluctuates randomly"],
         "correctAnswer": "It decreases towards zero",
         "hint": "More rectangles mean the steps fit the curve more tightly, reducing the empty or overlapping gaps.",
-        "explanation": "Adding more rectangles makes their width smaller, meaning they approximate the curve's profile more precisely, making the error vanish."
+        "explanation": "Adding more rectangles makes their width smaller, meaning they approximate the curve's profile more precisely, making the error vanish.",
+        "explanationSteps": [
+          "Riemann sums use discrete rectangles to estimate the area under a curve.",
+          "As we add more rectangles, the width of each rectangle decreases.",
+          "Narrower rectangles follow the curve's slope more closely, leaving smaller gaps.",
+          "Therefore, the approximation error decreases towards zero."
+        ]
       }
     },
     {
       "id": "calc_q2",
+      "level": 1,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2", "a": 0, "b": 2, "rectangles": 10 },
+      "content": "### Limit evaluation",
+      "question": {
+        "text": "What is the limit of (x² - 1) / (x - 1) as x approaches 1?",
+        "type": "multiple-choice",
+        "choices": ["0", "1", "2", "Undefined"],
+        "correctAnswer": "2",
+        "hint": "Factor the numerator (x² - 1) and cancel out the common factor (x - 1).",
+        "explanation": "Lim (x-1)(x+1)/(x-1) = Lim (x+1) = 1+1 = 2.",
+        "explanationSteps": [
+          "Try direct substitution: x = 1 yields 0/0 (indeterminate).",
+          "Factor the numerator: x² - 1 = (x - 1)(x + 1).",
+          "Rewrite the limit: Lim [ (x-1)(x+1) / (x-1) ].",
+          "Cancel the common term (x-1): Lim (x+1).",
+          "Substitute x = 1: 1 + 1 = 2."
+        ]
+      }
+    },
+    {
+      "id": "calc_q3",
+      "level": 1,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2" },
+      "content": "### Secant slope function",
+      "question": {
+        "text": "If a secant line passes through (1, 1) and (1+h, (1+h)²) on the curve y = x², what is its slope as a function of h?",
+        "type": "multiple-choice",
+        "choices": ["h", "2 + h", "2", "2h + h²"],
+        "correctAnswer": "2 + h",
+        "hint": "Use the slope formula: (y₂ - y₁) / (x₂ - x₁).",
+        "explanation": "Slope = ((1+h)² - 1)/h = (1 + 2h + h² - 1)/h = (2h + h²)/h = 2 + h.",
+        "explanationSteps": [
+          "Write the slope formula: m = Δy / Δx.",
+          "Compute Δy: (1+h)² - 1 = 1 + 2h + h² - 1 = 2h + h².",
+          "Compute Δx: (1+h) - 1 = h.",
+          "Divide: m = (2h + h²) / h = 2 + h."
+        ]
+      }
+    },
+    {
+      "id": "calc_q4",
+      "level": 1,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2" },
+      "content": "### Secant to Tangent",
+      "question": {
+        "text": "As the secant interval h approaches 0, what does the slope of y = x² at x = 1 approach?",
+        "type": "multiple-choice",
+        "choices": ["0", "1", "2", "Undefined"],
+        "correctAnswer": "2",
+        "hint": "Take the limit of (2 + h) as h approaches 0.",
+        "explanation": "Lim (2+h) as h->0 is 2. This is the definition of the derivative at that point.",
+        "explanationSteps": [
+          "The secant slope function is 2 + h.",
+          "Take the limit of this function as h approaches 0.",
+          "Limit = 2 + 0 = 2."
+        ]
+      }
+    },
+    {
+      "id": "calc_q5",
+      "level": 1,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2" },
+      "content": "### Defining integrals",
+      "question": {
+        "text": "What does the definite integral represent geometrically?",
+        "type": "multiple-choice",
+        "choices": ["The slope of the tangent line", "The net signed area under the curve", "The length of the curve", "The volume of the function"],
+        "correctAnswer": "The net signed area under the curve",
+        "hint": "Integrals sum up infinitesimal rectangles under the curve.",
+        "explanation": "Geometrically, the definite integral calculates the signed area bounded by the function and the horizontal axis.",
+        "explanationSteps": [
+          "The definite integral sums up infintesimal products of f(x) * dx.",
+          "f(x) represents the height, and dx represents the width.",
+          "Adding these products calculates the area under the curve."
+        ]
+      }
+    },
+    {
+      "id": "calc_q6",
       "level": 2,
       "type": "question",
       "widget": "RiemannSums",
@@ -40,11 +133,106 @@
         "choices": ["4/3", "8/3", "2", "4"],
         "correctAnswer": "8/3",
         "hint": "Substitute the bounds 2 and 0 into the antiderivative x^3 / 3.",
-        "explanation": "Substituting $x = 2$ yields $2^3/3 = 8/3$. Subtracting the lower bound value $0^3/3 = 0$ gives $8/3$, which is approximately $2.67$."
+        "explanation": "Substituting $x = 2$ yields $2^3/3 = 8/3$. Subtracting the lower bound value $0^3/3 = 0$ gives $8/3$, which is approximately $2.67$.",
+        "explanationSteps": [
+          "Find antiderivative of x²: x³ / 3.",
+          "Evaluate at upper bound 2: 2³ / 3 = 8/3.",
+          "Evaluate at lower bound 0: 0³ / 3 = 0.",
+          "Subtract lower bound from upper bound: 8/3 - 0 = 8/3."
+        ]
       }
     },
     {
-      "id": "calc_q3",
+      "id": "calc_q7",
+      "level": 2,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "sin(x^2)" },
+      "content": "### Chain Rule Derivative",
+      "question": {
+        "text": "Find the derivative of f(x) = sin(x²).",
+        "type": "multiple-choice",
+        "choices": ["cos(x²)", "2x * cos(x²)", "2x * sin(x²)", "-2x * cos(x²)"],
+        "correctAnswer": "2x * cos(x²)",
+        "hint": "Use Chain Rule: derivative of outer function times derivative of inner function.",
+        "explanation": "d/dx[sin(x²)] = cos(x²) * d/dx[x²] = cos(x²) * 2x.",
+        "explanationSteps": [
+          "Identify outer function: sin(u) -> derivative is cos(u).",
+          "Identify inner function: u = x² -> derivative is 2x.",
+          "Apply Chain Rule: outer_derivative(inner) * inner_derivative.",
+          "Result is cos(x²) * 2x = 2x * cos(x²)."
+        ]
+      }
+    },
+    {
+      "id": "calc_q8",
+      "level": 2,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "3x^2" },
+      "content": "### Basic indefinite integral",
+      "question": {
+        "text": "Evaluate the indefinite integral ∫ 3x² dx.",
+        "type": "multiple-choice",
+        "choices": ["x³ + C", "6x + C", "3x³ + C", "x² + C"],
+        "correctAnswer": "x³ + C",
+        "hint": "Use power rule of integration: increase power by 1 and divide by that power.",
+        "explanation": "∫ 3x² dx = 3 * (x³ / 3) + C = x³ + C.",
+        "explanationSteps": [
+          "Integrate term-by-term using power rule: ∫ x^n dx = x^(n+1) / (n+1).",
+          "For 3x²: 3 * (x³ / 3).",
+          "Simplify: x³.",
+          "Add integration constant: x³ + C."
+        ]
+      }
+    },
+    {
+      "id": "calc_q9",
+      "level": 2,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x*ln(x)" },
+      "content": "### Product rule derivative",
+      "question": {
+        "text": "Find the derivative of f(x) = x * ln(x).",
+        "type": "multiple-choice",
+        "choices": ["ln(x)", "1", "ln(x) + 1", "x / x"],
+        "correctAnswer": "ln(x) + 1",
+        "hint": "Use Product Rule: u'v + uv' where u = x and v = ln(x).",
+        "explanation": "d/dx[x * ln(x)] = 1 * ln(x) + x * (1/x) = ln(x) + 1.",
+        "explanationSteps": [
+          "Let u = x (u' = 1) and v = ln(x) (v' = 1/x).",
+          "Use product rule: u'v + uv'.",
+          "Substitute: 1 * ln(x) + x * (1/x).",
+          "Simplify: ln(x) + 1."
+        ]
+      }
+    },
+    {
+      "id": "calc_q10",
+      "level": 2,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "2x" },
+      "content": "### Definite Integral 2x",
+      "question": {
+        "text": "Evaluate the definite integral of 2x dx from 1 to 3.",
+        "type": "multiple-choice",
+        "choices": ["4", "6", "8", "9"],
+        "correctAnswer": "8",
+        "type": "multiple-choice",
+        "hint": "Antiderivative is x². Evaluate at 3 and subtract evaluation at 1.",
+        "explanation": "[x²] from 1 to 3 is 3² - 1² = 9 - 1 = 8.",
+        "explanationSteps": [
+          "Find antiderivative of 2x: x².",
+          "Evaluate at upper bound 3: 3² = 9.",
+          "Evaluate at lower bound 1: 1² = 1.",
+          "Subtract: 9 - 1 = 8."
+        ]
+      }
+    },
+    {
+      "id": "calc_q11",
       "level": 3,
       "type": "question",
       "widget": "RiemannSums",
@@ -56,7 +244,102 @@
         "choices": ["e^(x^2) + C", "2 * e^(x^2) + C", "x^2 * e^x + C", "e^x + C"],
         "correctAnswer": "e^(x^2) + C",
         "hint": "Let u = x^2. Then du = 2x dx. The integral becomes ∫ e^u du.",
-        "explanation": "With $u = x^2$ and $du = 2x\\,dx$, the integral simplifies to $\\int e^u du = e^u + C$. Substituting back $u = x^2$ gives $e^{x^2} + C$."
+        "explanation": "With $u = x^2$ and $du = 2x\\,dx$, the integral simplifies to $\\int e^u du = e^u + C$. Substituting back $u = x^2$ gives $e^{x^2} + C$.",
+        "explanationSteps": [
+          "Choose substitution u = x².",
+          "Calculate differential du: du = 2x dx.",
+          "Substitute u and du into the integral: ∫ e^u du.",
+          "Integrate: e^u + C.",
+          "Substitute back u = x²: e^(x²) + C."
+        ]
+      }
+    },
+    {
+      "id": "calc_q12",
+      "level": 3,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "type": "parts" },
+      "content": "### Integration by Parts",
+      "question": {
+        "text": "Evaluate: ∫ x * cos(x) dx",
+        "type": "multiple-choice",
+        "choices": ["x*sin(x) + cos(x) + C", "x*sin(x) - cos(x) + C", "x*cos(x) + sin(x) + C", "-x*sin(x) + C"],
+        "correctAnswer": "x*sin(x) + cos(x) + C",
+        "hint": "Use integration by parts: ∫ u dv = uv - ∫ v du where u = x and dv = cos(x)dx.",
+        "explanation": "uv - ∫ v du = x*sin(x) - ∫ sin(x)dx = x*sin(x) + cos(x) + C.",
+        "explanationSteps": [
+          "Let u = x (du = dx) and dv = cos(x)dx (v = sin(x)).",
+          "Apply parts formula: uv - ∫ v du.",
+          "Substitute: x*sin(x) - ∫ sin(x) dx.",
+          "Since ∫ sin(x) dx = -cos(x), the double negative yields: x*sin(x) + cos(x) + C."
+        ]
+      }
+    },
+    {
+      "id": "calc_q13",
+      "level": 3,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "type": "series" },
+      "content": "### Convergence of Harmonic Series",
+      "question": {
+        "text": "Does the infinite series ∑(1/n) from n=1 to infinity converge or diverge?",
+        "type": "multiple-choice",
+        "choices": ["Converges", "Diverges", "Oscillates", "Converges to 1"],
+        "correctAnswer": "Diverges",
+        "hint": "This is the Harmonic Series. Think about the Integral Test.",
+        "explanation": "By integral test, ∫ 1/x dx from 1 to infinity is ln(x), which approaches infinity. Hence, it diverges.",
+        "explanationSteps": [
+          "Identify the series: ∑ (1/n), known as the Harmonic Series.",
+          "Use the Integral Test: evaluate ∫ (1/x) dx from 1 to infinity.",
+          "Antiderivative is ln(x). The limit as x approaches infinity is infinity.",
+          "Since the integral diverges, the series diverges."
+        ]
+      }
+    },
+    {
+      "id": "calc_q14",
+      "level": 3,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "type": "taylor" },
+      "content": "### Taylor polynomials",
+      "question": {
+        "text": "What is the second-degree Taylor polynomial of e^x centered at x=0?",
+        "type": "multiple-choice",
+        "choices": ["1 + x", "1 + x + x²/2", "1 + x + x²", "x + x²/2"],
+        "correctAnswer": "1 + x + x²/2",
+        "hint": "Use the formula: f(0) + f'(0)x + f''(0)x²/2!.",
+        "explanation": "Since all derivatives of e^x are e^x, evaluated at 0 they equal 1. So 1 + x + x²/2.",
+        "explanationSteps": [
+          "Recall Taylor formula: P₂(x) = f(0) + f'(0)x + f''(0)x²/2.",
+          "For f(x) = e^x, f(0)=1, f'(0)=1, f''(0)=1.",
+          "Substitute constants: 1 + 1x + (1)x²/2.",
+          "Result is 1 + x + x²/2."
+        ]
+      }
+    },
+    {
+      "id": "calc_q15",
+      "level": 3,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "type": "integration" },
+      "content": "### Advanced bound evaluation",
+      "question": {
+        "text": "Evaluate the definite integral of (e^x + x) dx from 0 to 1.",
+        "type": "multiple-choice",
+        "choices": ["e - 0.5", "e + 0.5", "e - 1.5", "e"],
+        "correctAnswer": "e - 0.5",
+        "hint": "Antiderivative is e^x + x²/2. Evaluate at 1 and subtract evaluation at 0.",
+        "explanation": "[e^x + x²/2] from 0 to 1 = (e + 0.5) - (e^0 + 0) = e + 0.5 - 1 = e - 0.5.",
+        "explanationSteps": [
+          "Find the antiderivative: e^x + x²/2.",
+          "Evaluate at upper bound 1: e¹ + 1²/2 = e + 0.5.",
+          "Evaluate at lower bound 0: e⁰ + 0²/2 = 1.",
+          "Subtract lower bound: (e + 0.5) - 1 = e - 0.5."
+        ]
       }
     }
   ]

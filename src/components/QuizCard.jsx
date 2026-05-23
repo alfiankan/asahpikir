@@ -8,6 +8,7 @@ export const QuizCard = ({ step, onAnswer }) => {
   const [startTime, setStartTime] = useState(Date.now());
   const [hintsUsed, setHintsUsed] = useState(false);
   const [showHint, setShowHint] = useState(false);
+  const [showStepByStep, setShowStepByStep] = useState(false);
 
   // Reset states on step changes
   useEffect(() => {
@@ -17,6 +18,7 @@ export const QuizCard = ({ step, onAnswer }) => {
     setStartTime(Date.now());
     setHintsUsed(false);
     setShowHint(false);
+    setShowStepByStep(false);
   }, [step.id]);
 
   if (!step.question) {
@@ -35,7 +37,7 @@ export const QuizCard = ({ step, onAnswer }) => {
     );
   }
 
-  const { text, choices, correctAnswer, hint, explanation } = step.question;
+  const { text, choices, correctAnswer, hint, explanation, explanationSteps } = step.question;
 
   const handleSubmit = () => {
     if (!selected || submitted) return;
@@ -190,6 +192,29 @@ export const QuizCard = ({ step, onAnswer }) => {
                 )}
               </div>
               <p style={{ fontSize: '14px', color: 'hsl(var(--text-secondary))' }}>{explanation}</p>
+              
+              {!isCorrect && explanationSteps && explanationSteps.length > 0 && (
+                <div style={{ marginTop: '12px' }}>
+                  <button
+                    className="btn btn-secondary"
+                    style={{ padding: '6px 12px', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '4px' }}
+                    onClick={(e) => { e.preventDefault(); setShowStepByStep(!showStepByStep); }}
+                  >
+                    <HelpCircle size={15} style={{ color: 'hsl(var(--primary))' }} />
+                    {showStepByStep ? "Hide Step-by-Step Help" : "Show Step-by-Step Help"}
+                  </button>
+                  {showStepByStep && (
+                    <div className="glass-panel" style={{ marginTop: '12px', padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left', background: 'rgba(0,0,0,0.2)' }}>
+                      {explanationSteps.map((stepText, stepIdx) => (
+                        <div key={stepIdx} style={{ display: 'flex', gap: '8px', fontSize: '13.5px', color: 'hsl(var(--text-secondary))' }}>
+                          <span style={{ fontWeight: 'bold', color: 'hsl(var(--primary))' }}>{stepIdx + 1}.</span>
+                          <span>{stepText}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
               
               <button
                 className="btn btn-primary"
