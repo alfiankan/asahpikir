@@ -1,0 +1,63 @@
+{
+  "id": "mid_ratios",
+  "title": "Ratios & Proportions",
+  "prerequisites": ["elem_fractions"],
+  "steps": [
+    {
+      "id": "ratio_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 2, "yellow": 3 },
+      "content": "### What is a Ratio?\nA ratio compares two quantities. For example, if you mix 2 parts Blue paint with 3 parts Yellow paint, you get a specific shade of green. We write this ratio as $2:3$ (read as '2 to 3')."
+    },
+    {
+      "id": "ratio_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 4, "yellow": 6, "targetColor": [4, 6] },
+      "content": "### Scaling the Mixture\nIf we double the recipe to make a larger batch of green paint, we must multiply both parts by 2. This keeps the ratio proportional and the color identical.",
+      "question": {
+        "text": "What is the simplified form of the ratio 4:6?",
+        "type": "multiple-choice",
+        "choices": ["1:2", "2:3", "3:2", "4:3"],
+        "correctAnswer": "2:3",
+        "hint": "Divide both numbers by their greatest common factor, which is 2.",
+        "explanation": "Dividing both 4 and 6 by 2 yields $2:3$, showing that $4:6$ is equivalent to $2:3$ and results in the exact same paint color."
+      }
+    },
+    {
+      "id": "ratio_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 6, "yellow": 10, "targetRatio": [3, 5] },
+      "content": "### Direct Proportion calculations\nWhen two ratios are equal, they form a proportion. For instance, $3/5 = x/15$. We can scale up or cross-multiply to solve for $x$.",
+      "question": {
+        "text": "Solve for x: 3/5 = x/15",
+        "type": "multiple-choice",
+        "choices": ["6", "8", "9", "12"],
+        "correctAnswer": "9",
+        "hint": "Since the denominator 5 is multiplied by 3 to get 15, do the same to the numerator 3.",
+        "explanation": "Multiplying the numerator 3 by 3 gives $x = 9$. Thus, $3:5$ is proportional to $9:15$."
+      }
+    },
+    {
+      "id": "ratio_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "RatioMixer",
+      "widgetParams": { "blue": 1, "yellow": 4, "inverse": true },
+      "content": "### Inverse Proportion\nIn a direct proportion, as one value increases, the other increases. In an **inverse proportion**, as one value increases, the other *decreases*. For example, if 2 painters take 6 hours to paint a house, 4 painters will take *less* time.",
+      "question": {
+        "text": "If 2 painters take 6 hours to complete a job, how long will it take 4 painters working at the same speed?",
+        "type": "multiple-choice",
+        "choices": ["12 hours", "6 hours", "3 hours", "1.5 hours"],
+        "correctAnswer": "3 hours",
+        "hint": "More workers mean less time. The product of workers and hours is constant: 2 * 6 = 12 worker-hours.",
+        "explanation": "The total work needed is $2 \times 6 = 12$ worker-hours. If 4 painters work together, they divide the total workload: $12 / 4 = 3$ hours."
+      }
+    }
+  ]
+}

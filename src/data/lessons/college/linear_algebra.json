@@ -1,0 +1,63 @@
+{
+  "id": "coll_linear_algebra",
+  "title": "Linear Algebra",
+  "prerequisites": ["coll_calculus"],
+  "steps": [
+    {
+      "id": "linalg_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "VectorSpace3D",
+      "widgetParams": { "matrix": [[1, 0], [0, 1]], "vector": [1, 2] },
+      "content": "### Vector Space Transformations\nIn linear algebra, a matrix acts as a function that transforms space. Multiplying a vector by a matrix rotates, scales, or shears the vector relative to the coordinate grid. The identity matrix $\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ leaves all vectors unchanged."
+    },
+    {
+      "id": "linalg_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "VectorSpace3D",
+      "widgetParams": { "matrix": [[2, 0], [0, 2]], "vector": [1, 2], "interactive": true },
+      "content": "### Scaling Space\nLook at the diagonal matrix $\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$. This transformation scales the basis vectors, doubling the size of any grid cell.",
+      "question": {
+        "text": "What happens to the vector [1, 2] after applying this scaling matrix?",
+        "type": "multiple-choice",
+        "choices": ["It becomes [2, 4]", "It becomes [1, 2]", "It becomes [3, 4]", "It becomes [2, 2]"],
+        "correctAnswer": "It becomes [2, 4]",
+        "hint": "Multiply each component of the vector [1, 2] by 2.",
+        "explanation": "Applying the matrix: $\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 2(1) + 0(2) \\\\ 0(1) + 2(2) \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$."
+      }
+    },
+    {
+      "id": "linalg_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "VectorSpace3D",
+      "widgetParams": { "matrix": [[1, 2], [0, 1]], "vector": [1, 1], "interactive": true },
+      "content": "### Shearing Space\nThe matrix $\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$ is a shear matrix. It slides points horizontally proportional to their height, while keeping their y-coordinates constant.",
+      "question": {
+        "text": "What is the determinant of the shear matrix: [[1, 2], [0, 1]]?",
+        "type": "multiple-choice",
+        "choices": ["1", "2", "0", "-1"],
+        "correctAnswer": "1",
+        "hint": "The determinant of a 2x2 matrix [[a, b], [c, d]] is ad - bc.",
+        "explanation": "The determinant is $(1 \\times 1) - (2 \\times 0) = 1 - 0 = 1$. Visually, shearing distorts shapes but preserves the total area of the grid cells."
+      }
+    },
+    {
+      "id": "linalg_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "VectorSpace3D",
+      "widgetParams": { "eigenvalues": true },
+      "content": "### Eigenvalues and Eigenvectors\nAn **eigenvector** is a special vector that does not change direction when a linear transformation is applied. It only scales by a factor called the **eigenvalue** ($\\lambda$):\n$$A v = \\lambda v$$",
+      "question": {
+        "text": "If a matrix A transforms vector v such that A v = [3, 6] where v = [1, 2], what is the eigenvalue λ?",
+        "type": "multiple-choice",
+        "choices": ["1", "2", "3", "6"],
+        "correctAnswer": "3",
+        "hint": "Find the scaling factor between the input vector [1, 2] and output vector [3, 6].",
+        "explanation": "Since $[3, 6] = 3 \\times [1, 2]$, the vector $v$ was scaled by a factor of 3. Thus, the eigenvalue is $\\lambda = 3$."
+      }
+    }
+  ]
+}

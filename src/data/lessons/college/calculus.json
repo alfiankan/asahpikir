@@ -1,0 +1,63 @@
+{
+  "id": "coll_calculus",
+  "title": "Calculus I & II",
+  "prerequisites": ["high_functions"],
+  "steps": [
+    {
+      "id": "calc_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2", "a": 0, "b": 2, "rectangles": 4 },
+      "content": "### What is an Integral?\nAn integral calculates the area under a curve. Before calculus, mathematicians estimated this by drawing rectangles. A **Riemann Sum** adds up the areas of $N$ rectangles. As $N$ becomes infinitely large, the sum approaches the exact area under the curve."
+    },
+    {
+      "id": "calc_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2", "a": 0, "b": 2, "rectangles": 10, "interactive": true },
+      "content": "### Approximating with Rectangles\nLook at the Riemann Sum for $f(x) = x^2$ from $x = 0$ to $2$. When we use a few rectangles, the estimate has a lot of gaps.",
+      "question": {
+        "text": "As the number of rectangles increases, what happens to the approximation error?",
+        "type": "multiple-choice",
+        "choices": ["It increases", "It decreases towards zero", "It stays the same", "It fluctuates randomly"],
+        "correctAnswer": "It decreases towards zero",
+        "hint": "More rectangles mean the steps fit the curve more tightly, reducing the empty or overlapping gaps.",
+        "explanation": "Adding more rectangles makes their width smaller, meaning they approximate the curve's profile more precisely, making the error vanish."
+      }
+    },
+    {
+      "id": "calc_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "function": "x^2", "a": 0, "b": 2, "exact": true },
+      "content": "### The Exact Definite Integral\nUsing the Fundamental Theorem of Calculus, the exact area under $f(x) = x^2$ from $0$ to $2$ is computed as:\n$$\\int_0^2 x^2 dx = \\left[ \\frac{x^3}{3} \\right]_0^2 = \\frac{2^3}{3} - \\frac{0^3}{3}$$",
+      "question": {
+        "text": "What is the exact area under the curve y = x^2 from 0 to 2?",
+        "type": "multiple-choice",
+        "choices": ["4/3", "8/3", "2", "4"],
+        "correctAnswer": "8/3",
+        "hint": "Substitute the bounds 2 and 0 into the antiderivative x^3 / 3.",
+        "explanation": "Substituting $x = 2$ yields $2^3/3 = 8/3$. Subtracting the lower bound value $0^3/3 = 0$ gives $8/3$, which is approximately $2.67$."
+      }
+    },
+    {
+      "id": "calc_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "RiemannSums",
+      "widgetParams": { "type": "substitution" },
+      "content": "### Integration Techniques: Substitution\nSometimes finding the antiderivative is tricky. The method of **u-substitution** is the reverse of the chain rule. It transforms the integral into an easier form: $\\int f(g(x))g'(x)dx = \\int f(u)du$ where $u = g(x)$ and $du = g'(x)dx$.",
+      "question": {
+        "text": "Find the integral of 2x * e^(x^2) dx.",
+        "type": "multiple-choice",
+        "choices": ["e^(x^2) + C", "2 * e^(x^2) + C", "x^2 * e^x + C", "e^x + C"],
+        "correctAnswer": "e^(x^2) + C",
+        "hint": "Let u = x^2. Then du = 2x dx. The integral becomes ∫ e^u du.",
+        "explanation": "With $u = x^2$ and $du = 2x\\,dx$, the integral simplifies to $\\int e^u du = e^u + C$. Substituting back $u = x^2$ gives $e^{x^2} + C$."
+      }
+    }
+  ]
+}

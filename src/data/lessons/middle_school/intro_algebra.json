@@ -1,0 +1,63 @@
+{
+  "id": "mid_intro_algebra",
+  "title": "Intro to Algebra",
+  "prerequisites": ["mid_ratios"],
+  "steps": [
+    {
+      "id": "alg_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "AlgebraBalance",
+      "widgetParams": { "left": ["x", 4], "right": [10] },
+      "content": "### What is a Variable?\nIn algebra, a variable (like $x$) is a placeholder for an unknown number. We can find the value of $x$ by performing operations to isolate it on one side of the equation."
+    },
+    {
+      "id": "alg_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "AlgebraBalance",
+      "widgetParams": { "left": ["x", 5], "right": [12] },
+      "content": "### Subtracting to Isolate\nTo solve $x + 5 = 12$, we want to get $x$ by itself. We do this by doing the opposite of addition, which is subtraction.",
+      "question": {
+        "text": "What must you do to both sides of x + 5 = 12 to solve for x?",
+        "type": "multiple-choice",
+        "choices": ["Add 5 to both sides", "Subtract 5 from both sides", "Multiply both sides by 5", "Divide both sides by 5"],
+        "correctAnswer": "Subtract 5 from both sides",
+        "hint": "To cancel out '+ 5' on the left, apply its inverse operation.",
+        "explanation": "Subtracting 5 from both sides cancels out the $+5$ on the left, leaving $x = 12 - 5$, so $x = 7$."
+      }
+    },
+    {
+      "id": "alg_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "AlgebraBalance",
+      "widgetParams": { "left": ["3x", 2], "right": [14] },
+      "content": "### Solving Two-Step Equations\nConsider $3x + 2 = 14$. Here, $x$ is multiplied by 3 and has 2 added to it. We undo the operations in reverse order: first undo addition/subtraction, then undo multiplication/division.",
+      "question": {
+        "text": "Solve for x: 3x + 2 = 14",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "6"],
+        "correctAnswer": "4",
+        "hint": "First subtract 2 from both sides to get 3x = 12. Then divide both sides by 3.",
+        "explanation": "Subtracting 2 gives $3x = 12$. Dividing by 3 gives $x = 4$."
+      }
+    },
+    {
+      "id": "alg_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "AlgebraBalance",
+      "widgetParams": { "left": ["2x", 3], "right": ["x", 8] },
+      "content": "### Variables on Both Sides\nTo solve $2x + 3 = x + 8$, we must first gather all terms containing $x$ on one side, and constant numbers on the other side.",
+      "question": {
+        "text": "Solve for x: 2x + 3 = x + 8",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "11"],
+        "correctAnswer": "5",
+        "hint": "Subtract 'x' from both sides to get all x terms on the left. Then isolate x.",
+        "explanation": "Subtracting $x$ from both sides gives $x + 3 = 8$. Then subtracting 3 from both sides gives $x = 5$."
+      }
+    }
+  ]
+}

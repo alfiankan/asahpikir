@@ -1,0 +1,63 @@
+{
+  "id": "elem_arithmetic",
+  "title": "Arithmetic Fundamentals",
+  "prerequisites": [],
+  "steps": [
+    {
+      "id": "arith_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": [5], "right": [2, 3] },
+      "content": "### Balancing Equations\nArithmetic is all about keeping things in balance. An equation is like a balance scale: whatever is on the left side must weigh the exact same as what is on the right side. In this scale, 5 units on the left balances perfectly with 2 + 3 units on the right."
+    },
+    {
+      "id": "arith_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 3], "right": [8] },
+      "content": "### Find the Unknown\nLook at the scale. We have a mystery box $x$ and a weight of 3 on the left, and a weight of 8 on the right. What weight must the mystery box $x$ have to balance the scale?",
+      "question": {
+        "text": "What is the value of x?",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "6"],
+        "correctAnswer": "5",
+        "hint": "Try subtracting 3 from both sides of the scale to isolate the mystery box.",
+        "explanation": "If we remove 3 units from both sides, the scale remains balanced, showing that the mystery box $x$ weighs exactly 5 units."
+      }
+    },
+    {
+      "id": "arith_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", "x", 2], "right": [12] },
+      "content": "### Two Identical Boxes\nNow we have two identical mystery boxes $x$ and a weight of 2 balancing with 12 on the right side. Let's find what one box $x$ weighs.",
+      "question": {
+        "text": "Solve for x: 2x + 2 = 12",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "6"],
+        "correctAnswer": "5",
+        "hint": "First subtract 2 from both sides. You get 2x = 10. Then divide by 2.",
+        "explanation": "Subtracting 2 from both sides gives $2x = 10$. Since the two boxes are identical, each box must weigh half of 10, which is 5."
+      }
+    },
+    {
+      "id": "arith_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "BalanceScale",
+      "widgetParams": { "left": ["x", 7], "right": ["2x", 3] },
+      "content": "### Variables on Both Sides\nWhat happens when we have mystery boxes on both sides? We have one box $x$ and a 7 weight on the left, and two boxes $x$ and a 3 weight on the right. Let's simplify this by removing equal items from both sides.",
+      "question": {
+        "text": "Solve for x: x + 7 = 2x + 3",
+        "type": "multiple-choice",
+        "choices": ["3", "4", "5", "10"],
+        "correctAnswer": "4",
+        "hint": "Try removing one box 'x' from both sides first, then subtract 3 from both sides.",
+        "explanation": "Removing one $x$ box from both sides leaves $7 = x + 3$. Subtracting 3 from both sides gives $4 = x$, which is our solution!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "high_trig",
+  "title": "Trigonometry",
+  "prerequisites": ["mid_intro_algebra"],
+  "steps": [
+    {
+      "id": "trig_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "UnitCircleTrig",
+      "widgetParams": { "angle": 0.523598 },
+      "content": "### The Unit Circle\nTrigonometry connects angles to linear ratios. A unit circle is a circle with a radius of exactly 1. When we rotate a vector by angle $\\theta$ from the positive x-axis:\n- The **x-coordinate** of the intersection point is $\\cos(\\theta)$ (the width).\n- The **y-coordinate** of the intersection point is $\\sin(\\theta)$ (the height)."
+    },
+    {
+      "id": "trig_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "UnitCircleTrig",
+      "widgetParams": { "angle": 1.57079, "interactive": true },
+      "content": "### Max Height on the Circle\nRotate the angle slider until the vector points straight up ($90^\\circ$ or $\\pi/2$ radians). Look at the height (y-coordinate) of the point on the circle.",
+      "question": {
+        "text": "What is the value of sin(π/2) (or sin(90°))?",
+        "type": "multiple-choice",
+        "choices": ["0", "0.5", "1", "-1"],
+        "correctAnswer": "1",
+        "hint": "When pointing straight up, the y-coordinate matches the radius of the unit circle.",
+        "explanation": "Since the radius is 1, pointing straight up places the intersection point at $(0, 1)$. The y-coordinate (sine) is therefore 1."
+      }
+    },
+    {
+      "id": "trig_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "UnitCircleTrig",
+      "widgetParams": { "angle": 3.14159, "interactive": true },
+      "content": "### Negative Coordinates\nWhen we rotate past $90^\\circ$, coordinates can become negative. Let's point the vector straight left ($180^\\circ$ or $\\pi$ radians). Check the x-coordinate (cosine) and y-coordinate (sine).",
+      "question": {
+        "text": "What are the values of cos(π) and sin(π) respectively?",
+        "type": "multiple-choice",
+        "choices": ["cos(π) = 1, sin(π) = 0", "cos(π) = -1, sin(π) = 0", "cos(π) = 0, sin(π) = 1", "cos(π) = -1, sin(π) = -1"],
+        "correctAnswer": "cos(π) = -1, sin(π) = 0",
+        "hint": "Pointing straight left puts the point at coordinates (-1, 0) on the 2D plane.",
+        "explanation": "At $\\pi$ radians, the point on the circle is $(-1, 0)$. Since $x = \\cos(\\theta)$ and $y = \\sin(\\theta)$, we get $\\cos(\\pi) = -1$ and $\\sin(\\pi) = 0$."
+      }
+    },
+    {
+      "id": "trig_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "UnitCircleTrig",
+      "widgetParams": { "angle": 0.785398, "showTangent": true },
+      "content": "### The Tangent function\nThe tangent of an angle, $\\tan(\\theta)$, represents the slope of the angle line. Geometrically, it is the length of the tangent segment from the intersection point to the x-axis, or simply $\\sin(\\theta)/\\cos(\\theta)$.",
+      "question": {
+        "text": "At what angle in the first quadrant (0 to π/2) does tangent equal 1?",
+        "type": "multiple-choice",
+        "choices": ["π/6 (30°)", "π/4 (45°)", "π/3 (60°)", "π/2 (90°)"],
+        "correctAnswer": "π/4 (45°)",
+        "hint": "Tangent is sine divided by cosine. It equals 1 where sine and cosine are equal (equal height and width).",
+        "explanation": "At $\\pi/4$ ($45^\\circ$), the triangle is an isosceles right triangle, meaning the height and width are equal (both $\\sqrt{2}/2$). Therefore, $\\tan(\\pi/4) = \\sin(\\pi/4)/\\cos(\\pi/4) = 1$."
+      }
+    }
+  ]
+}

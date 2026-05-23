@@ -1,0 +1,63 @@
+{
+  "id": "high_functions",
+  "title": "Functions",
+  "prerequisites": ["high_trig"],
+  "steps": [
+    {
+      "id": "func_s1",
+      "level": 1,
+      "type": "exploration",
+      "widget": "CoordinatePlotter",
+      "widgetParams": { "functionType": "linear", "m": 1, "b": 0 },
+      "content": "### What is a Function?\nA function is a relationship where each input $x$ has exactly one output $y$. A linear function is written as $y = mx + b$, where $m$ is the slope (steepness) and $b$ is the y-intercept (where it crosses the vertical axis)."
+    },
+    {
+      "id": "func_q1",
+      "level": 1,
+      "type": "question",
+      "widget": "CoordinatePlotter",
+      "widgetParams": { "functionType": "linear", "m": 2, "b": 3, "interactive": true },
+      "content": "### Shifting the Intercept\nLook at the line $y = 2x + 3$. The slope is 2 and the intercept is 3.",
+      "question": {
+        "text": "Where does the line y = 2x + 3 cross the y-axis?",
+        "type": "multiple-choice",
+        "choices": ["(0, 2)", "(0, 3)", "(3, 0)", "(0, 0)"],
+        "correctAnswer": "(0, 3)",
+        "hint": "Set x = 0 in the equation to find the y-coordinate of the crossing point.",
+        "explanation": "If we plug in $x = 0$, we get $y = 2(0) + 3 = 3$. So the line crosses the y-axis at $(0, 3)$."
+      }
+    },
+    {
+      "id": "func_q2",
+      "level": 2,
+      "type": "question",
+      "widget": "CoordinatePlotter",
+      "widgetParams": { "functionType": "quadratic", "h": 2, "k": -1, "interactive": true },
+      "content": "### Quadratic Shifts\nQuadratic functions shape like parabolas: $y = a(x - h)^2 + k$. The point $(h, k)$ is the vertex (the peak or trough of the curve). Changing $h$ shifts the curve horizontally, and changing $k$ shifts it vertically.",
+      "question": {
+        "text": "What is the vertex of the parabola y = (x - 2)^2 - 1?",
+        "type": "multiple-choice",
+        "choices": ["(2, -1)", "(-2, -1)", "(2, 1)", "(-2, 1)"],
+        "correctAnswer": "(2, -1)",
+        "hint": "Match the equation with the vertex form: y = a(x - h)^2 + k.",
+        "explanation": "Comparing $y = (x-2)^2 - 1$ to $y = a(x-h)^2 + k$, we see $h = 2$ and $k = -1$. The vertex is at $(2, -1)$."
+      }
+    },
+    {
+      "id": "func_q3",
+      "level": 3,
+      "type": "question",
+      "widget": "CoordinatePlotter",
+      "widgetParams": { "functionType": "rational", "interactive": true },
+      "content": "### Domain Restrictions\nThe **domain** of a function is the set of all allowed inputs $x$. For rational functions like $f(x) = 1/(x - 3)$, division by zero is undefined, creating a vertical boundary called an asymptote.",
+      "question": {
+        "text": "What is the domain of the function f(x) = 1 / (x - 3)?",
+        "type": "multiple-choice",
+        "choices": ["All real numbers except x = 3", "All real numbers except x = 0", "Only x > 3", "Only x = 3"],
+        "correctAnswer": "All real numbers except x = 3",
+        "hint": "The denominator cannot equal zero, meaning x - 3 ≠ 0.",
+        "explanation": "Setting $x - 3 = 0$ gives $x = 3$. At this value, the function divides by zero, which is impossible. Thus, $x = 3$ is excluded from the domain."
+      }
+    }
+  ]
+}
